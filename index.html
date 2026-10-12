@@ -1,0 +1,362 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="CrownArena — free-to-play Whot, Dice and Snooker competitive gaming.">
+
+  <title>CrownArena — Play. Compete. Rise.</title>
+
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="CrownArena home">
+    <span class="brand-mark">♛</span>
+    <span>CROWN<span class="brand-sub">ARENA</span></span>
+  </a>
+
+  <nav>
+    <a href="#games">Games</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#leaderboard">Leaderboard</a>
+  </nav>
+
+  <div class="top-actions">
+    <span class="free-pill">FREE PLAY</span>
+    <button id="profileButton" class="avatar" aria-label="Player profile">P</button>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">
+        <span class="pulse"></span>
+        YOUR NEXT MATCH STARTS HERE
+      </div>
+
+      <h1>Play smart.<br><span>Win with skill.</span></h1>
+
+      <p>
+        Classic Nigerian Whot, quick Dice matches and a Snooker
+        scoreboard — together in one arena.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="#games">
+          Choose a game <span>↗</span>
+        </a>
+        <button id="quickMatch" class="btn secondary">
+          ⚡ Quick match
+        </button>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <strong>03</strong>
+          <small>CLASSIC GAMES</small>
+        </div>
+        <div>
+          <strong>1v1 / 4</strong>
+          <small>GAME FORMATS</small>
+        </div>
+        <div>
+          <strong>₦0</strong>
+          <small>TO PLAY DEMO</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+
+      <div class="float-card card-red">
+        <b>WHOT</b>
+        <span>20</span>
+        <i>★</i>
+      </div>
+
+      <div class="float-card card-blue">
+        <b>DICE</b>
+        <span>⚄</span>
+        <i>ROLL</i>
+      </div>
+
+      <div class="float-card card-gold">
+        <b>YOUR MOVE</b>
+        <span>♟</span>
+        <i>PLAY</i>
+      </div>
+
+      <div class="hero-center">
+        <span>CROWN</span>
+        <strong>♛</strong>
+        <small>CLAIM YOUR CROWN</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME SELECTION -->
+  <section id="games" class="section">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">PICK YOUR BATTLE</span>
+        <h2>Choose a game</h2>
+      </div>
+
+      <span class="section-note">Free practice mode · No deposits</span>
+    </div>
+
+    <div class="game-grid">
+
+      <!-- WHOT -->
+      <article class="game-card whot-card-bg">
+        <div class="game-art whot-art">
+          <span class="mini-card mc-one">20<br>★</span>
+          <span class="mini-card mc-two">8<br>▲</span>
+          <span class="mini-card mc-three">2<br>●</span>
+        </div>
+
+        <div class="game-info">
+          <div class="game-meta">
+            <span class="tag tag-hot">PLAYER FAVOURITE</span>
+            <span>♧ CARD GAME</span>
+          </div>
+
+          <h3>Nigerian Classic Whot</h3>
+
+          <p>
+            Match shapes and numbers, use special cards,
+            and empty your hand first.
+          </p>
+
+          <div class="game-bottom">
+            <span>2 or 4 players</span>
+            <button class="btn small primary" data-game="whot">
+              Play Whot ↗
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- DICE -->
+      <article class="game-card dice-card-bg">
+        <div class="game-art dice-art">
+          <span class="die die-a">⚄</span>
+          <span class="die die-b">⚅</span>
+          <span class="spark">✦</span>
+        </div>
+
+        <div class="game-info">
+          <div class="game-meta">
+            <span class="tag">FAST MATCH</span>
+            <span>⚄ DICE GAME</span>
+          </div>
+
+          <h3>Dice Clash</h3>
+
+          <p>
+            Take turns rolling. The highest total after
+            four rounds takes the match.
+          </p>
+
+          <div class="game-bottom">
+            <span>2 or 4 players</span>
+            <button class="btn small primary" data-game="dice">
+              Roll in ↗
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- SNOOKER -->
+      <article class="game-card snooker-card-bg">
+        <div class="game-art snooker-art">
+          <div class="table-shape">
+            <span class="ball red-ball"></span>
+            <span class="ball yellow-ball"></span>
+            <span class="ball blue-ball"></span>
+            <span class="cue"></span>
+          </div>
+        </div>
+
+        <div class="game-info">
+          <div class="game-meta">
+            <span class="tag">SKILL & SCORE</span>
+            <span>◉ SNOOKER</span>
+          </div>
+
+          <h3>Snooker Scoreboard</h3>
+
+          <p>
+            Track pot scores and fouls in a clean
+            head-to-head practice match.
+          </p>
+
+          <div class="game-bottom">
+            <span>1v1 only</span>
+            <button class="btn small primary" data-game="snooker">
+              Start table ↗
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- MATCH SETUP AND LEADERBOARD -->
+  <section id="rooms" class="section lower-grid">
+
+    <div class="panel">
+      <div class="section-heading compact">
+        <div>
+          <span class="eyebrow">JUMP STRAIGHT IN</span>
+          <h2>Match setup</h2>
+        </div>
+      </div>
+
+      <form id="matchForm" class="match-form">
+
+        <label>
+          Choose game
+          <select id="gameSelect">
+            <option value="whot">Nigerian Classic Whot</option>
+            <option value="dice">Dice Clash</option>
+            <option value="snooker">Snooker Scoreboard</option>
+          </select>
+        </label>
+
+        <label>
+          Competition format
+          <select id="formatSelect">
+            <option value="1v1">1v1 — head to head</option>
+            <option value="4-player">4-player — free-for-all</option>
+          </select>
+        </label>
+
+        <label>
+          Room type
+          <select id="visibilitySelect">
+            <option value="public">Public matchmaking</option>
+            <option value="private">Private room (demo)</option>
+          </select>
+        </label>
+
+        <button class="btn primary full" type="submit">
+          Create free match <span>↗</span>
+        </button>
+
+        <p class="form-note">
+          This preview runs locally in your browser.
+          Online rooms and accounts are not connected yet.
+        </p>
+      </form>
+    </div>
+
+    <!-- DEMO LEADERBOARD -->
+    <div id="leaderboard" class="panel leaderboard">
+      <div class="section-heading compact">
+        <div>
+          <span class="eyebrow">LOCAL PREVIEW</span>
+          <h2>Leaderboard</h2>
+        </div>
+
+        <span class="tag">DEMO DATA</span>
+      </div>
+
+      <div class="rank-row">
+        <span class="rank-num gold">01</span>
+        <span class="rank-avatar">K</span>
+        <div class="rank-name">
+          <b>Kingsley</b>
+          <small>Whot specialist</small>
+        </div>
+        <strong>1,420 <small>XP</small></strong>
+      </div>
+
+      <div class="rank-row">
+        <span class="rank-num silver">02</span>
+        <span class="rank-avatar violet">A</span>
+        <div class="rank-name">
+          <b>Amaka</b>
+          <small>Dice challenger</small>
+        </div>
+        <strong>1,280 <small>XP</small></strong>
+      </div>
+
+      <div class="rank-row">
+        <span class="rank-num bronze">03</span>
+        <span class="rank-avatar green">T</span>
+        <div class="rank-name">
+          <b>Tunde</b>
+          <small>All-rounder</small>
+        </div>
+        <strong>1,105 <small>XP</small></strong>
+      </div>
+
+      <p class="form-note">
+        Scores above are sample UI data, not real player records.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- GAME BOARD -->
+  <section id="playArea" class="section play-section hidden" aria-live="polite">
+
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">PRACTICE MATCH</span>
+        <h2 id="matchTitle">Your match</h2>
+      </div>
+
+      <button id="closeMatch" class="btn secondary">
+        ← Back to CrownArena
+      </button>
+    </div>
+
+    <div id="matchStatus" class="match-status"></div>
+    <div id="gameBoard" class="game-board"></div>
+
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="brand footer-brand">
+    <span class="brand-mark">♛</span>
+    <span>CROWN<span class="brand-sub">ARENA</span></span>
+  </div>
+
+  <p>
+    Built for friendly competition. Free-play preview —
+    no real-money wagering enabled.
+  </p>
+
+  <a href="#home">Back to top ↑</a>
+</footer>
+
+<!-- MATCH RESULT -->
+<dialog id="resultDialog" class="result-dialog">
+  <div class="result-icon">✦</div>
+  <h2 id="resultTitle">Match complete</h2>
+  <p id="resultText"></p>
+  <button id="resultClose" class="btn primary full">
+    Continue playing
+  </button>
+</dialog>
+
+<script type="module" src="src/app.js"></script>
+
+</body>
+</html>
+```
